@@ -12,6 +12,7 @@
     
     flex-wrap: wrap;
     align-items: center;
+   
     
 }
 .lefthead{
@@ -27,6 +28,10 @@ img{
     padding: 10px 0px 10px 40px;
     
     box-shadow: 0px 2px 5px rgb(240, 5, 5);
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    background-color: #242424
 }
 body{
     background-color: #242424;
@@ -70,8 +75,31 @@ img{
     height: 100%;
     
 }
+.alldivs{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2,1fr);
+    justify-items: center;
+    row-gap: 50px;
+}
 @media screen and (max-width: 500px) {
+    
     .head {
      margin-top: 20px;
     }
+    .alldivs{
+        display: flex;
+        flex-direction: column;
+    }
+    .divs{
+        min-width: 100vw;
+    }
   }
+
+.divs{
+   max-width: 350px;
+   background-color: #202020;
+   
+    
+}
+
